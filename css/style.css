@@ -1,3 +1,108 @@
-.borda {
-  border: 1px solid #000;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  outline: 0;
+  font-weight: 300;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  min-width: 360px;
+}
+
+.border {
+  border: 1px solid orange;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #ec3434;
+}
+
+header .logo {
+  width: 75%;
+  /* background: url(../images/logo-espo.png) no-repeat fixed; */
+}
+
+header .logo img {
+  width: 100%;
+  max-height: 80px;
+  width: auto;
+}
+
+header .btn-menu {
+  margin-right: 15px;
+  margin-top: 15px;
+  
+  width: 56px;
+  height: 56px;
+  /* float: right; */
+  /* position: fixed; */
+  /* right: 2%; */
+  /* top: 2px; */
+  color: #ec3434;
+  text-align: center;
+  border-radius: 56px;
+  background: linear-gradient(to right, #eebbc0, #fa892d);
+}
+
+.btn-header {
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  right: 2%;
+  bottom: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 56px;
+  background: linear-gradient(to right, #ce2e3c, #da6709)
+}
+
+.menu {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-close {
+  color: #fff;
+  font-size: 1.5em;
+  float: right;
+  cursor: pointer;
+  margin: 2% 3% 0 0;
+}
+
+.menu ul {
+  width: 100%;
+  float: left;
+  text-align: center;
+  list-style: none;
+}
+
+.menu li {
+  padding: 1.5%;
+}
+
+.menu li a {
+  color: #fff;
+  font-size: 24px;
+  padding: 1.5em 3%;
+}
+
+.menu li a:hover {
+  color:#da6709
 }
