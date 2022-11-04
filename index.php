@@ -9,10 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="borda">
-      <div class="logo borda">Logo</div>
-      <div class="menu borda">Menu</div>
-  </header>
+  <?php include_once 'header.php'; ?>
+  
 
   <content>
     <div class="slider borda">Slider</div>
