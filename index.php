@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-      <div class="logo">Logo</div>
-      <div class="menu">Menu</div>
+  <header class="borda">
+      <div class="logo borda">Logo</div>
+      <div class="menu borda">Menu</div>
   </header>
 
   <content>
-    <div class="slider">Slider</div>
-    <div class="ads-list">ADS List</div>
-    <div class="testimonials">Depoimentos</div>
-    <div class="who-wer-are">Quem somos</div>
+    <div class="slider borda">Slider</div>
+    <div class="ads-list borda">ADS List</div>
+    <div class="testimonials borda">Depoimentos</div>
+    <div class="who-wer-are borda">Quem somos</div>
   </content>
 
-  <footer>
+  <footer class="borda">
   </footer>
 </body>
 </html>
