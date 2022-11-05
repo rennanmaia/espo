@@ -1,15 +1,6 @@
--- MySQL Workbench Synchronization
--- Generated: 2022-11-04 15:05
--- Model: New Model
--- Version: 1.0
--- Project: Name of the project
--- Author: Larissa
+CREATE DATABASE 'espodb';
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-
-ALTER SCHEMA `espodb`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci ;
+USE 'espodb';
 
 CREATE TABLE IF NOT EXISTS `espodb`.`espaco` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -22,6 +13,10 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+INSERT INTO `espaco` (`id`, `descricao`, `obs`, `latitude`, `longitude`) VALUES (NULL, 'UFOPA 001', 'Espaço em frente à UFOPA Campus Tapajós', '-2.417675', '-54.740101');
+
+INSERT INTO `espaco` (`id`, `descricao`, `obs`, `latitude`, `longitude`) VALUES (NULL, 'UFOPA 002', 'Espaço em frente à UFOPA Campus Tapajós', '-2.417675', '-54.740101');
+
+INSERT INTO `espaco` (`id`, `descricao`, `obs`, `latitude`, `longitude`) VALUES (NULL, 'Fernando Guilhon 001', 'Espaço na Av. Fernando Guilhon em frente ao Atacadão', '', '');
+
+INSERT INTO `espaco` (`id`, `descricao`, `obs`, `latitude`, `longitude`) VALUES (NULL, 'Rio Tapajós Shopping 001', 'Espaço na Av. Fernando Guilhon no estacionamento do Rio Tapajós Shopping', '', '');
