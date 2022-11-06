@@ -1,4 +1,4 @@
-<div class="ads-list border">
+<div class="ads-list">
 <?php
 include_once 'connect.php';
 
@@ -12,7 +12,7 @@ while ($row = $result->fetch_array()) {
     $longitude = $row['longitude'];
 
     echo "
-      <div class='ads-card borda'>
+      <div class='ads-card'>
       <div class='ads-title'>
         " .
         $id .
@@ -21,15 +21,21 @@ while ($row = $result->fetch_array()) {
         "
       </div>
 
+      <div class='ads-image'>
+        <img src='images/aeroporto-001.jpg'>
+      </div>
+
       <div class='ads-obs'>
       " .
         $obs .
         "
       </div>
 
-      <div class='ads-details-button'>
-        <button>Ver detalhes</button>
-        <button>Ver mapa</button>
+      <div class='ads-buttons'>
+        <div class='ads-details-button'>
+          <button>Ver detalhes</button>
+          <button>Ver mapa</button>
+        </div>
       </div>
       </div>
     ";

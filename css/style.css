@@ -46,10 +46,6 @@ header .btn-menu {
   
   width: 56px;
   height: 56px;
-  /* float: right; */
-  /* position: fixed; */
-  /* right: 2%; */
-  /* top: 2px; */
   color: #ec3434;
   text-align: center;
   border-radius: 56px;
@@ -105,4 +101,81 @@ header .btn-menu {
 
 .menu li a:hover {
   color:#da6709
+}
+
+.ads-list {
+  width: 100%;
+  padding: 10px;
+  background-color: #fab498;
+}
+
+.ads-list .ads-card {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #ffdccf;
+  margin: 10px 0;
+}
+
+.ads-list .ads-card .ads-title {
+  width: 100%;
+  text-align: center;
+  background-color: #ec3434;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.ads-list .ads-image img
+ {
+  width: 100%;
+}
+
+.ads-list .ads-buttons {
+  width: 100%;
+}
+
+.ads-list .ads-buttons button {
+  width: 45%;
+  margin: 5px 5px 15px 5px;
+  padding: 10px;
+  font-weight: bold ;
+  border-radius: 5px;
+  background-color: #ec3434;
+  color: white;
+}
+
+.slider {
+
+  margin: 0 auto;
+  /* width: 800px; */
+  /* height: 400px; */
+  overflow: hidden;
+  width: 90%;
+}
+
+.slides {
+
+  padding: 1% 0%;
+  width: 500%;
+  height: 400px;
+  display: flex;
+
+
+}
+
+.slides input {
+  display: none;
+
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img {
+  width: 800px;
+
 }

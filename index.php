@@ -20,7 +20,20 @@
   <?php include_once 'header.php'; ?>
   
   <content>
-    <div class="slider border">Slider</div>
+    <!-- <div class="slider border">Slider</div> -->
+    <div class="slider">
+
+    <div class="slider2">
+      <div>
+        <img src="images/floresta1.jpg" width="100%" title="Floresta 1">
+      </div>
+      <div>
+        <img src="images/floresta2.jpg" width="100%" title="Floresta 2">
+      </div>
+      <div>
+        <img src="images/floresta3.jpg" width="100%" title="Floresta 3">
+      </div>
+  </div>
     <?php include_once 'ads_list.php'; ?>
     <div class="testimonials border">Depoimentos</div>
     <div class="who-wer-are border">Quem somos</div>
