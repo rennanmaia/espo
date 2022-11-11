@@ -1,6 +1,8 @@
 <header>
   <div class="logo">
-    <img src="images/logo-espo.png">
+    <a href="index.php">
+      <img src="images/logo-espo.png">
+    </a>
   </div>
   <button class="btn-menu">
     <i class="fas fa-bars fa-lg"></i>
@@ -13,7 +15,7 @@
         <!-- botão para fechar o menu -->
     <ul>
       <li><a href="#" class="btn-menu-item">Home</a></li>
-      <li><a href="#" class="btn-menu-item">Destaques</a></li>
+      <li><a href="#" class="btn-new-space">Novo espaço</a></li>
       <li><a href="#" class="btn-menu-item">Tipos de serviço</a></li>
       <li><a href="#" class="btn-menu-item">Espaços</a></li>
       <li><a href="#" class="btn-menu-item">Depoimentos</a></li>
