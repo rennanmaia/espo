@@ -1,0 +1,27 @@
+.bxslider {
+  width: 100%;
+  max-height: 40px;
+  /* height: 382px; */
+  /* height: 80%; */
+}
+
+.bxslider img {
+  display: block;
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover; /* or object-fit: contain; */
+} 
+  
+.bx-caption {
+  padding: 20px 5px 30px 20px;
+}
+
+.bx-caption .title {
+  font-size: 1.5em;
+  color: white;
+}
+
+.bx-caption .nc_subtitle {
+  font-size: 1em;
+  color: yellow;
+}
