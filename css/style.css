@@ -118,6 +118,68 @@ a {
   margin: 5px 0 5px 0;
 }
 
+
+.page-title  {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  color: #ec3434;
+}
+
+.espo-form {
+  width: 98%;
+  margin: 0 2% 0 2%;
+  padding: 5px;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.espo-form .field {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.espo-form .field-label {
+  width: 100%;
+  padding: 5px 5px 0 5px;
+}
+
+.espo-form .field-data {
+  width: 100%;
+  padding: 0 5px 5px 5px;
+}
+
+.espo-form .field-data input {
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.espo-form .field-data textarea {
+  width: 70%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #ec3434;
+  color: white;
+  border-radius: 5px;
+}
+
+
 /* smartphones */
 /* @media screen and (min-width: 480px) {
   .logo {

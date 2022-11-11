@@ -27,10 +27,78 @@
   <?php include_once 'header.php'; ?>
   
   <content>
+    <h1 class="page-title">Cadastrar novo espaço</h1>
+
+    <div class="espo-form">
+      <div class="field">
+        <div class="field-label">
+          Descrição
+        </div>
+        <div class="field-data">
+          <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição" size="40">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">
+          Latitude
+        </div>
+        <div class="field-data">
+          <input type="text" id="latitude" name="latitude" placeholder="Digite a latitude do local" size="30">
+        </div>
+      </div>      
+
+      <div class="field">
+        <div class="field-label">
+          Longitude
+        </div>
+        <div class="field-data">
+          <input type="text" id="longitude" name="longitude" placeholder="Digite a longitude do local" size="30">
+        </div>
+      </div>      
+      
+      <div class="field">
+        <div class="field-label">
+          Observações
+        </div>
+        <div class="field-data">
+          <textarea name="observacao">
+            </textarea>
+          </div>
+        </div>
+        
+        <div class="button-container">
+          <input type="submit" class="submit-button" id="botao_submit" name="botao-submit"
+          value="Cadastrar">
+      </div>
+    </div>
   </content>
 
   <footer class="border">
   </footer>
+
+  <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 </body>
 </html>
 
