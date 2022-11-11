@@ -22,6 +22,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .ads-list {
   width: 100%;
   padding: 10px;
@@ -65,6 +67,56 @@ a {
   color: white;
 }
 
+.bxslider {
+  width: 100%;
+  max-width: 480px;
+  max-height: 40px;
+  /* height: 382px; */
+  /* height: 80%; */
+}
+
+/* Slider */
+.bxslider img {
+  display: block;
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover; /* or object-fit: contain; */
+} 
+  
+.bx-caption {
+  padding: 20px 5px 30px 20px;
+}
+
+.bx-caption .title {
+  font-size: 1.5em;
+  color: white;
+}
+
+.bx-caption .nc_subtitle {
+  font-size: 1em;
+  color: yellow;
+}
+
+/* Tipos de serviços */
+.service-classes {
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+}
+
+.service-classes .service-classes-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.service-classes .highlights {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
 
 /* smartphones */
 /* @media screen and (min-width: 480px) {
@@ -75,7 +127,19 @@ a {
     }
 } */
 
-/* tablets */
-@media screen and (min-width: 768px) {
 
+/* tablets */
+/* @media (min-width: 481px) and (max-width: 768px) { */
+@media (min-width: 481px) {
+  .bxslider {
+    width: 60%;
+    max-width: 768px;
+    min-width: 481px;
+  }
+
+  .service-classes {
+    width: 30%;
+    max-width: 768px;
+    min-width: 481px;
+  }
 }
