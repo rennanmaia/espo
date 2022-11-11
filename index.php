@@ -26,9 +26,8 @@
   <?php include_once 'header.php'; ?>
   
   <content>
-
-
     <?php include_once 'slider.php'; ?>
+    <?php include_once 'service_classes.php'; ?>
     <?php include_once 'ads_list.php'; ?>
     <div class="testimonials border">Depoimentos</div>
     <div class="who-wer-are border">Quem somos</div>

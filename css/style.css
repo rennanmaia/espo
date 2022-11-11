@@ -64,3 +64,18 @@ a {
   background-color: #ec3434;
   color: white;
 }
+
+
+/* smartphones */
+/* @media screen and (min-width: 480px) {
+  .logo {
+    width: 200px;
+    background: url(../images/logo.png) center center/200px no-repeat;
+    
+    }
+} */
+
+/* tablets */
+@media screen and (min-width: 768px) {
+
+}
