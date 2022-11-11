@@ -30,47 +30,50 @@
     <h1 class="page-title">Cadastrar novo espaço</h1>
 
     <div class="espo-form">
-      <div class="field">
-        <div class="field-label">
-          Descrição
-        </div>
-        <div class="field-data">
-          <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição" size="40">
-        </div>
-      </div>
+      <form action="new_space_insert.php" method="POST">
 
-      <div class="field">
-        <div class="field-label">
-          Latitude
-        </div>
-        <div class="field-data">
-          <input type="text" id="latitude" name="latitude" placeholder="Digite a latitude do local" size="30">
-        </div>
-      </div>      
-
-      <div class="field">
-        <div class="field-label">
-          Longitude
-        </div>
-        <div class="field-data">
-          <input type="text" id="longitude" name="longitude" placeholder="Digite a longitude do local" size="30">
-        </div>
-      </div>      
-      
-      <div class="field">
-        <div class="field-label">
-          Observações
-        </div>
-        <div class="field-data">
-          <textarea name="observacao">
-            </textarea>
+        <div class="field">
+          <div class="field-label">
+            Descrição
+          </div>
+          <div class="field-data">
+            <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição" size="40">
           </div>
         </div>
+
+        <div class="field">
+          <div class="field-label">
+            Latitude
+          </div>
+          <div class="field-data">
+            <input type="text" id="latitude" name="latitude" placeholder="Digite a latitude do local" size="30">
+          </div>
+        </div>      
+
+        <div class="field">
+          <div class="field-label">
+            Longitude
+          </div>
+          <div class="field-data">
+            <input type="text" id="longitude" name="longitude" placeholder="Digite a longitude do local" size="30">
+          </div>
+        </div>      
+      
+        <div class="field">
+          <div class="field-label">
+            Observações
+          </div>
+          <div class="field-data">
+            <textarea name="observacao">
+              </textarea>
+            </div>
+          </div>
         
-        <div class="button-container">
-          <input type="submit" class="submit-button" id="botao_submit" name="botao-submit"
-          value="Cadastrar">
-      </div>
+          <div class="button-container">
+            <input type="submit" class="submit-button" id="botao_submit" name="botao-submit"
+            value="Cadastrar">
+        </div>
+      </form>
     </div>
   </content>
 
