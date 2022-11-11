@@ -170,6 +170,9 @@ a {
 .button-container {
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
 }
 
 .submit-button {
@@ -177,6 +180,24 @@ a {
   background-color: #ec3434;
   color: white;
   border-radius: 5px;
+  margin-right: 20px;
+}
+
+.button-container button {
+}
+
+.catch-location {
+  padding: 10px;
+  background-color: #fab498;
+  border-radius: 5px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.catch-location:hover {
+  background-color: #ec3434;
+  color: white;
 }
 
 

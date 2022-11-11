@@ -72,6 +72,8 @@
           <div class="button-container">
             <input type="submit" class="submit-button" id="botao_submit" name="botao-submit"
             value="Cadastrar">
+            <a class="catch-location" href="#" onclick="getLocation()">Capturar localização</a>
+
         </div>
       </form>
     </div>
@@ -80,27 +82,23 @@
   <footer class="border">
   </footer>
 
-  <p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-
 <script>
-var x = document.getElementById("demo");
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(populatePosition);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+function populatePosition(position) {
+  let lat_field = document.getElementById("latitude");
+  let long_field = document.getElementById("longitude");
+  lat_field.value = position.coords.latitude;
+  long_field.value = position.coords.longitude;
 }
+
 </script>
 </body>
 </html>
