@@ -15,25 +15,20 @@
     />
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/slider.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script "text/javascript" src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
   <?php include_once 'header.php'; ?>
   
   <content>
-    <!-- <div class="slider border">Slider</div> -->
-    <div class="slider">
 
-    <div class="slider2">
-      <div>
-        <img src="images/floresta1.jpg" width="100%" title="Floresta 1">
-      </div>
-      <div>
-        <img src="images/floresta2.jpg" width="100%" title="Floresta 2">
-      </div>
-      <div>
-        <img src="images/floresta3.jpg" width="100%" title="Floresta 3">
-      </div>
-  </div>
+
+    <?php include_once 'slider.php'; ?>
     <?php include_once 'ads_list.php'; ?>
     <div class="testimonials border">Depoimentos</div>
     <div class="who-wer-are border">Quem somos</div>
@@ -46,6 +41,7 @@
 
 <script src="js/all.min.js"></script>
 <script src="js/jquery.js"></script>
+<script src="js/script.js" ></script>
 
 
 <script>
@@ -65,4 +61,18 @@
   $('.menu').click(function () {
     $('.menu').hide()
   })
+
+  $(document).ready(function(){
+      // $('.slider').bxSlider();
+
+      $('.slider2').bxSlider({
+        autoControls: true,
+        auto: true,
+        pager: true,
+        slideWidth: 800,
+        mode: 'fade',
+        captions: true,
+        speed: 1000
+      });      
+  });
 </script>
