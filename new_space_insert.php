@@ -30,16 +30,37 @@
     <h1 class="page-title">Cadastrar novo espaço</h1>
 
     <?php
-    echo $descricao = $_POST['descricao'];
-    echo $observacao = $_POST['observacao'];
-    echo $lat = $_POST['latitude'];
-    echo $long = $_POST['longitude'];
+    $descricao = $_POST['descricao'];
+    $observacao = $_POST['observacao'];
+    $lat = $_POST['latitude'];
+    $long = $_POST['longitude'];
     ?>
+
+
+    <div class="space-insert">
+
+<?php
+include_once 'connect.php';
+
+$sql = "INSERT INTO espaco (descricao, obs, latitude, longitude) VALUES ('$descricao', '$observacao', '$lat', '$long')";
+
+if ($result = mysqli_query($connection, $sql)) {
+    echo "Espaço cadastrado com sucesso.
+    <a href='index.php'>Voltar</a>
+  ";
+} else {
+    echo "Erro ao cadastrar espaço.
+    <a href='index.php'>Voltar</a>
+  ";
+}
+?>
+
+</div>
 
 
   </content>
 
-  <footer class="border">
+  <footer class="">
   </footer>
 
 </body>
