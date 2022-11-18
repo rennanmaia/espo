@@ -57,6 +57,10 @@ a {
   width: 100%;
 }
 
+.ads-details-button {
+  display: flex;
+}
+
 .ads-list .ads-buttons button {
   width: 45%;
   margin: 5px 5px 15px 5px;
@@ -66,6 +70,18 @@ a {
   background-color: #ec3434;
   color: white;
 }
+
+.ads-list .ads-buttons .ads-details-link {
+  width: 45%;
+  margin: 5px 5px 15px 5px;
+  padding: 10px;
+  font-weight: bold ;
+  border-radius: 5px;
+  background-color: #ec3434;
+  color: white;
+  text-align: center;
+}
+
 
 .bxslider {
   width: 100%;

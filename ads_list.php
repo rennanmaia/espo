@@ -33,7 +33,9 @@ while ($row = $result->fetch_array()) {
 
       <div class='ads-buttons'>
         <div class='ads-details-button'>
-          <button>Ver detalhes</button>
+          <a class='ads-details-link' href='space_detail.php?id=" .
+        $id .
+        "'>Ver detalhes</a>
           <button>Ver mapa</button>
         </div>
       </div>
