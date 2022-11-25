@@ -37,6 +37,7 @@ while ($row = $result->fetch_array()) {
         $id .
         "'>Ver detalhes</a>
           <button>Ver mapa</button>
+          <a class='ads-details-link' href='image_insert_form.php?espaco_id=$id' id=''>+</a>
         </div>
       </div>
       </div>
