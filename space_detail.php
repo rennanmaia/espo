@@ -27,8 +27,54 @@
   <?php include_once 'header.php'; ?>
   
   <content>
-    <h1 class="page-title">Detalhes de um espaço</h1>
+    <?php
+    include_once 'connect.php';
 
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+        $sql = "SELECT * FROM espaco WHERE id = '$id'";
+        $result = mysqli_query($connection, $sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_array();
+            $id = $row['id'];
+            $descricao = $row['descricao'];
+            $obs = $row['obs'];
+            $latitude = $row['latitude'];
+            $longitude = $row['longitude'];
+
+            echo "
+
+            <h1 class='page-title'>Detalhes de um espaço: 
+            " .
+                $id .
+                ' - ' .
+                $descricao .
+                "
+        </h1>
+
+        <div class='ads-card'>
+  
+          <div class='ads-image'>
+            Slider aqui
+          </div>
+  
+          <div class='ads-obs'>" .
+                $obs .
+                "</div>
+        </div>
+
+        <div class='space_location'>Mapa aqui
+        </div>
+      ";
+        } else {
+            echo 'Espaço não encontrado!';
+        }
+    } else {
+        echo 'Espaço não encontrado!';
+    }
+    ?>
     
   </content>
 

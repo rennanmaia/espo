@@ -82,6 +82,14 @@ a {
   text-align: center;
 }
 
+.space_location {
+  width: 98%;
+  height: 200px;
+  background-color: gray;
+  margin: 20px auto 20px auto;
+  border-radius: 10px;
+}
+
 
 .bxslider {
   width: 100%;

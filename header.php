@@ -14,7 +14,7 @@
     </a>
         <!-- botão para fechar o menu -->
     <ul>
-      <li><a href="#" class="btn-menu-item">Home</a></li>
+      <li><a href="index.php" class="btn-menu-item">Home</a></li>
       <li><a href="#" class="btn-new-space">Novo espaço</a></li>
       <li><a href="#" class="btn-menu-item">Tipos de serviço</a></li>
       <li><a href="#" class="btn-menu-item">Espaços</a></li>
