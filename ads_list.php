@@ -11,6 +11,19 @@ while ($row = $result->fetch_array()) {
     $latitude = $row['latitude'];
     $longitude = $row['longitude'];
 
+    $sql_images = "SELECT * FROM imagens WHERE espaco_id=$id";
+    $result_images = mysqli_query($connection, $sql_images);
+
+    $space_images = [];
+
+    if ($result_images->num_rows > 0) {
+        while ($row_images = $result_images->fetch_array()) {
+            $space_images[] = $row_images['file_name'];
+        }
+    } else {
+        $space_images[0] = 'demo.jpg';
+    }
+
     echo "
       <div class='ads-card'>
       <div class='ads-title'>
@@ -22,7 +35,9 @@ while ($row = $result->fetch_array()) {
       </div>
 
       <div class='ads-image'>
-        <img src='images/aeroporto-001.jpg'>
+        <img src='uploads/" .
+        $space_images[0] .
+        "'
       </div>
 
       <div class='ads-obs'>
