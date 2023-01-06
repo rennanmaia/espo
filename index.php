@@ -24,8 +24,13 @@
   <script "text/javascript" src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
-  <?php include_once 'header.php'; ?>
+  <?php 
   
+  include_once 'header.php';
+  include_once 'verifica_logado.php';
+
+  ?> 
+
   <content>
     <?php include_once 'slider.php'; ?>
     <?php include_once 'service_classes.php'; ?>

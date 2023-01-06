@@ -1,3 +1,49 @@
+<?php
+
+session_start();
+
+include_once 'connect.php';
+
+$msg = "";
+
+if (isset($_POST['login'])) {
+  $login = $_POST['login'];
+  $senha = $_POST['senha'];  
+  
+  $hash = hash('sha256', $senha);
+  
+  $sql = "SELECT * FROM usuarios WHERE login = '$login'";
+  
+  $result = mysqli_query($connection, $sql);
+  if ($result->num_rows == 1) {
+    $row = $result->fetch_array();
+    $senhadb = $row['senha'];
+
+    if ( ($senha != "") && ($hash == $senhadb)) {
+      // $msg = "Usuario logado";
+
+      //registrar sessao aqui
+      $_SESSION['login'] = $login;
+      $_SESSION['senha'] = $senha;
+      header('location:index.php');
+
+    } else {
+      $msg = "Senha incorreta ou não digitada";
+      header('location:login.php?msg=' . $msg);
+    }
+  } else {
+    $msg = "Usuario não encontrado";
+  }
+
+
+} else {
+  $msg = 'Não vei da pagina de login';
+}
+
+
+// echo $msg;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,45 +73,13 @@
 <?php include_once 'header.php'; ?>
 <h1 class="page-title">ESPO - Login</h1>
 
-<div class="mensagem">
-  <?php
-    if (isset($_GET['msg'])) {
-      echo $_GET['msg'];
-    }
-  ?>
-</div>
+<?php
 
-<div class="espo-form">
+echo $msg;
+echo "<br /> <a href='login.php'>Voltar</a>";
 
-<form action="logar.php" id="formlogin" name="formlogin" method="post" >
 
-<div class="field">
-  <div class="field-label">
-    Login
-  </div>
-  <div class="field-data">
-    <input type="text" id="login" name="login" placeholder="Digite o login" size="40">
-  </div>
-</div>
-
-<div class="field">
-  <div class="field-label">
-    Senha:
-  </div>
-  <div class="field-data">
-    <input type="password" name="senha" id="senha" />
-  </div>
-</div>
-
-<!-- <input type="submit" value="Entrar"  /> -->
-<div class="button-container">
-            <input type="submit" class="submit-button" id="botao_submit" name="botao-submit"
-            value="Entrar">
-
-            <a class="catch-location" href="new_user_form.php">Novo usuário</a>
-        </div>
-
-</form>
+?>
 
 </div>
 </body>
