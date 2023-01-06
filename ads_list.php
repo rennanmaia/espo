@@ -2,7 +2,7 @@
 <?php
 include_once 'connect.php';
 
-$result = mysqli_query($connection, 'SELECT * FROM espaco');
+$result = mysqli_query($connection, 'SELECT * FROM espaco LIMIT 0,5');
 
 while ($row = $result->fetch_array()) {
     $id = $row['id'];
